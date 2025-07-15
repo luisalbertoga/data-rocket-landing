@@ -4,10 +4,13 @@ import tailwind from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwind()]
-  },
   output: 'static',
-  site: 'https://luisalberto.github.io',
-  base: '/data-rocket-landing'
+  site: 'https://luisalbertoga.github.io',
+  base: '/data-rocket-landing',
+  vite: {
+    plugins: [tailwind()],
+    build: {
+      sourcemap: false
+    }
+  }
 });
