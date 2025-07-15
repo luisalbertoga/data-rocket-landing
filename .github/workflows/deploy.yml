@@ -3,26 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
-
-# Set the permissions for the GITHUB_TOKEN
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
     runs-on: ubuntu-latest
     
     steps:
@@ -44,14 +28,10 @@ jobs:
       - name: Create .nojekyll
         run: touch ./dist/.nojekyll
         
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-          
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: 'dist'
+          branch: 'gh-pages'
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
