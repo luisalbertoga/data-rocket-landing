@@ -1,16 +1,770 @@
 ---
-
+import '../styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataRocket - Transforma tu operación con tecnología hecha a tu medida">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>DataRocket | Digitalización y Automatización Empresarial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    DataRocket
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Funcionalidades</a>
+                    <a href="#pricing" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Precios</a>
+                    <a href="#faq" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Preguntas Frecuentes</a>
+                </div>
+                <button class="btn btn-primary">
+                    Contactar
+                </button>
+                <button class="md:hidden p-2 text-gray-600 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 text-white overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjUwJSIgaGVpZ2h0PSI1MCUiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] bg-repeat"></div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute top-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-20 -right-20 w-72 h-72 bg-indigo-500/10 rounded-full filter blur-3xl"></div>
+
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16 lg:pt-20 pb-16 text-center">
+            <!-- Badge -->
+            <div class="inline-block px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-blue-100 text-sm font-medium tracking-wide">
+                🚀 Potencia tu negocio
+            </div>
+            
+            <!-- Main heading -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+                Transforma tu operación con tecnología
+            </h1>
+            
+            <!-- Subheading -->
+            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Digitaliza y automatiza tu negocio sin costo inicial ni complicaciones. Soluciones a medida que crecen contigo.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                <button class="group relative px-8 py-4 text-lg font-semibold bg-white text-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <span class="relative z-10">Agenda una demo</span>
+                    <span class="absolute inset-0 bg-white/80 group-hover:bg-white/90 transition-colors duration-300 rounded-lg -z-0"></span>
+                </button>
+                <button class="group relative px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-lg hover:border-white/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <span class="relative z-10">Empieza ahora</span>
+                    <span class="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors duration-300 rounded-lg -z-0"></span>
+                </button>
+            </div>
+            
+            <!-- Stats Card -->
+            <div class="relative max-w-3xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1">+85%</div>
+                        <p class="text-blue-100 text-sm md:text-base">Mejoran su eficiencia operativa</p>
+                    </div>
+                    <div class="p-4 border-t md:border-t-0 md:border-l border-white/10">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1">+50</div>
+                        <p class="text-blue-100 text-sm md:text-base">Empresas confían en nosotros</p>
+                    </div>
+                    <div class="p-4 border-t md:border-t-0 md:border-l border-white/10">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
+                        <p class="text-blue-100 text-sm md:text-base">Soporte técnico especializado</p>
+                    </div>
+                </div>
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full filter blur-xl"></div>
+            </div>
+        </div>
+        
+        <!-- Bottom gradient fade -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none"></div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="w-8 h-12 border-2 border-white/30 rounded-2xl flex justify-center p-1">
+                <div class="w-1 h-2 bg-white/70 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Business Model -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">Nuestro Modelo</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Tecnología sin barreras</h2>
+                <p class="text-xl text-gray-600">Así funciona nuestro modelo de negocio diseñado para tu crecimiento</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                    {
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        ),
+                        title: 'SaaS Personalizado',
+                        description: 'Soluciones adaptadas a las necesidades específicas de tu negocio.'
+                    },
+                    {
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        ),
+                        title: 'Sin Pago Inicial',
+                        description: 'Empieza sin inversión inicial y paga solo por lo que necesites.'
+                    },
+                    {
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        ),
+                        title: 'Servidor Exclusivo',
+                        description: 'Infraestructura dedicada para garantizar el máximo rendimiento.'
+                    },
+                    {
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        ),
+                        title: 'Suscripción Mensual',
+                        description: 'Contratos flexibles sin ataduras a largo plazo.'
+                    }
+                ].map((item, index) => (
+                    <div key={index} class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 hover:border-blue-50">
+                        <div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl mb-6 group-hover:bg-blue-100 transition-colors duration-300">
+                            {item.icon}
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                        <p class="text-gray-600">{item.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">Funcionalidades</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Potencia tu negocio con nuestra plataforma</h2>
+                <p class="text-xl text-gray-600">Todo lo que necesitas para llevar tu negocio al siguiente nivel</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                    {
+                        title: 'Análisis Avanzado',
+                        description: 'Toma decisiones basadas en datos en tiempo real con nuestro potente motor de análisis.'
+                    },
+                    {
+                        title: 'Seguridad Empresarial',
+                        description: 'Protección de nivel empresarial para tus datos más sensibles.'
+                    },
+                    {
+                        title: 'Integraciones Inteligentes',
+                        description: 'Conecta con tus herramientas favoritas sin esfuerzo.'
+                    },
+                    {
+                        title: 'Automatización con IA',
+                        description: 'Automatiza tareas repetitivas con nuestra inteligencia artificial.'
+                    },
+                    {
+                        title: 'Acceso Móvil',
+                        description: 'Gestiona tu negocio desde cualquier lugar, en cualquier momento.'
+                    },
+                    {
+                        title: 'Escalabilidad Modular',
+                        description: 'Añade o quita funciones según las necesidades de tu negocio.'
+                    }
+                ].map((feature, index) => (
+                    <div key={index} class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-blue-100 transition-all duration-300 hover:shadow-lg">
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white text-blue-600 transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                            {feature.title}
+                        </h3>
+                        <p class="text-gray-600">{feature.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">Industrias</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Pensado para empresas que quieren crecer sin límites</h2>
+                <p class="text-xl text-gray-600">Adaptamos nuestra solución a las necesidades específicas de tu sector</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                    { 
+                        sector: 'Logística', 
+                        description: 'Optimiza rutas y gestión de flotas',
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                            </svg>
+                        )
+                    },
+                    { 
+                        sector: 'Inmobiliaria', 
+                        description: 'Gestiona propiedades y clientes',
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        )
+                    },
+                    { 
+                        sector: 'Salud', 
+                        description: 'Historiales médicos seguros',
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        )
+                    },
+                    { 
+                        sector: 'Manufactura', 
+                        description: 'Control de producción en tiempo real',
+                        icon: (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        )
+                    }
+                ].map((item, index) => (
+                    <div key={index} class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-blue-100">
+                        <div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-600 rounded-full mb-6 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            {item.icon}
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                            {item.sector}
+                        </h3>
+                        <p class="text-gray-600 text-center">{item.description}</p>
+                    </div>
+                ))}
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">Modelo de Precios</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Solución flexible que se adapta a tu negocio</h2>
+                <p class="text-xl text-gray-600">Elige entre nuestro SaaS listo para usar o desarrollos personalizados sin costo inicial</p>
+            </div>
+
+            <!-- Pricing Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-lg border border-gray-200 bg-white p-1">
+                    <button class="pricing-tab active px-6 py-2 rounded-md font-medium" data-tab="solutions">Soluciones</button>
+                    <button class="pricing-tab px-6 py-2 rounded-md font-medium" data-tab="modules">Módulos</button>
+                    <button class="pricing-tab px-6 py-2 rounded-md font-medium" data-tab="support">Soporte</button>
+                </div>
+            </div>
+
+            <!-- Pricing Solutions -->
+            <div id="solutions-tab" class="pricing-content active">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+                    <!-- SaaS Listo para Usar -->
+                    <div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">SaaS Listo para Usar</h3>
+                            <p class="text-gray-600">Aplicaciones modulares por suscripción</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-xl p-6 mb-6">
+                            <div class="text-center">
+                                <span class="text-3xl font-extrabold text-gray-900">Desde MX$6,000</span>
+                                <span class="text-gray-600">/mes + usuarios</span>
+                                <div class="mt-2 text-sm text-gray-600">
+                                    Base fija mensual + comisión escalonada
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Implementación rápida</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Módulos pre-configurados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Soporte incluido</span>
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                            Ver planes
+                        </button>
+                    </div>
+
+                    <!-- SaaS Personalizado -->
+                    <div class="relative bg-white rounded-2xl p-8 border-2 border-blue-500 shadow-xl transform -translate-y-2">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-gradient-to-r from-blue-600 to-blue-400 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-md">MÁS POPULAR</span>
+                        </div>
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">SaaS Personalizado</h3>
+                            <p class="text-gray-600">Desarrollo a medida sin costo inicial</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-xl p-6 mb-6">
+                            <div class="text-center">
+                                <span class="text-3xl font-extrabold text-gray-900">Contrato 1-3 años</span>
+                                <div class="mt-2 text-sm text-gray-600">
+                                    Base fija + comisión escalonada
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Desarrollo sin inversión inicial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Solución 100% personalizada</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Soporte prioritario incluido</span>
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all">
+                            Solicitar cotización
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Commission Structure -->
+                <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-sm border border-gray-100 mb-12">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Comisión por Transacciones</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Volumen Mensual (MXN)</th>
+                                    <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Comisión</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$0 – $100,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">3.0%</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$100,001 – $500,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">2.0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$500,001 – $1,000,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">1.0%</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$1,000,001 – $5,000,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">0.6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$5,000,001 – $10,000,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">0.4%</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$10,000,001 – $20,000,000</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">0.3%</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold">$20,000,001+</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold">0.2% o negociable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 text-center">* Se aplica una base fija mensual obligatoria para cubrir infraestructura y soporte básico</p>
+                </div>
+            </div>
+
+            <!-- Modules Tab (Hidden by default) -->
+            <div id="modules-tab" class="pricing-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    {[
+                        {
+                            category: 'Módulos Base',
+                            modules: [
+                                'Autenticación de Usuarios',
+                                'CRUD Empresarial',
+                                'Dashboard & Reportes',
+                                'Notificaciones',
+                                'Tareas Programadas',
+                                'Almacenamiento de Archivos',
+                                'Facturación y Suscripciones',
+                                'Integraciones Personalizadas'
+                            ]
+                        },
+                        {
+                            category: 'Módulos Genéricos',
+                            modules: [
+                                'Gestión de Equipos',
+                                'Multiidioma',
+                                'Roles y Permisos',
+                                'Firma de Documentos',
+                                'API Gateway',
+                                'Documentación Interna',
+                                'Formularios',
+                                'Auditoría y Logs'
+                            ]
+                        },
+                        {
+                            category: 'Módulos Avanzados',
+                            modules: [
+                                'Buscador Universal',
+                                'Vista Kanban',
+                                'KPIs y Productividad',
+                                'Exportaciones (PDF/Excel)',
+                                'Calendario y Agenda',
+                                'IA / Automatizaciones',
+                                'Centro de Alertas',
+                                'Control de Versionado'
+                            ]
+                        }
+                    ].map((section, index) => (
+                        <div key={index} class="bg-white rounded-xl p-6 border border-gray-200">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">{section.category}</h3>
+                            <ul class="space-y-3">
+                                {section.modules.map((module, i) => (
+                                    <li key={i} class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-700">{module}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Support Tab (Hidden by default) -->
+            <div id="support-tab" class="pricing-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    {[
+                        {
+                            name: 'Básico',
+                            price: '$0',
+                            channels: 'Email',
+                            availability: 'Lun-Vie, 9am-6pm',
+                            features: ['Soporte por correo electrónico', 'Respuesta en 24h hábiles', 'Base de conocimiento', 'Actualizaciones de seguridad'],
+                            cta: 'Incluido',
+                            popular: false
+                        },
+                        {
+                            name: 'Estándar',
+                            price: '$890',
+                            channels: 'Email + WhatsApp',
+                            availability: 'Lun-Sáb, 8am-8pm',
+                            features: ['Todo en Básico', 'Soporte por WhatsApp', 'Respuesta en 12h', 'Asistencia prioritaria', 'Videollamadas bajo cita'],
+                            cta: 'Contratar',
+                            popular: true
+                        },
+                        {
+                            name: 'Prioritario',
+                            price: '$1,890',
+                            channels: 'Email + WhatsApp + Teléfono',
+                            availability: '24/7',
+                            features: ['Todo en Estándar', 'Soporte telefónico 24/7', 'Respuesta en 4h', 'Sesiones de capacitación', 'Acceso a betas'],
+                            cta: 'Contratar',
+                            popular: false
+                        }
+                    ].map((plan, index) => (
+                        <div key={index} class={`bg-white rounded-xl p-6 border-2 ${plan.popular ? 'border-blue-500 shadow-lg' : 'border-gray-200'}`}>
+                            {plan.popular && (
+                                <div class="text-center -mt-8 mb-4">
+                                    <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">RECOMENDADO</span>
+                                </div>
+                            )}
+                            <h3 class="text-xl font-bold text-center mb-2">{plan.name}</h3>
+                            <div class="text-center mb-4">
+                                <span class="text-3xl font-extrabold">{plan.price}</span>
+                                <span class="text-gray-600">/mes</span>
+                            </div>
+                            <div class="text-center text-sm text-gray-600 mb-6">
+                                <p>{plan.channels}</p>
+                                <p>{plan.availability}</p>
+                            </div>
+                            <ul class="space-y-3 mb-6">
+                                {plan.features.map((feature, i) => (
+                                    <li key={i} class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-700">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <button class={`w-full py-2 px-4 rounded-lg font-medium ${plan.popular 
+                                ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                                : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}>
+                                {plan.cta}
+                            </button>
+                        </div>
+                    ))}
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600">¿Necesitas un plan personalizado con ingeniero dedicado?</p>
+                    <a href="#contacto" class="inline-flex items-center text-blue-600 font-semibold mt-2 hover:underline">
+                        Contáctanos para un plan Enterprise
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Base Price Calculator -->
+            <div class="mt-16 bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Calculadora de Precio Base</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Módulos Principales</h4>
+                        <div class="space-y-4">
+                            {[
+                                { name: 'CRUD + Auth', price: '$3,000' },
+                                { name: 'CRUD + Notificaciones + Tareas', price: '$4,500' },
+                                { name: '+ Dashboard personalizado', price: '$6,000' },
+                                { name: '+ Automatizaciones, auditoría', price: '$7,500 – $10,000' },
+                                { name: '+ Firma electrónica e integraciones', price: '$10,000 – $15,000' }
+                            ].map((item, i) => (
+                                <div key={i} class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">{item.name}</span>
+                                    <span class="font-semibold">{item.price}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Paquetes de Usuarios</h4>
+                        <div class="space-y-4">
+                            {[
+                                { users: 'Mínimo 50 usuarios', price: 'Incluido en base' },
+                                { users: '+5 usuarios', price: '$1,999/mes' },
+                                { users: '+10 usuarios', price: '$3,499/mes' },
+                                { users: '+25 usuarios', price: '$7,999/mes' },
+                                { users: 'Personalizado', price: 'Cotización' }
+                            ].map((item, i) => (
+                                <div key={i} class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">{item.users}</span>
+                                    <span class="font-semibold">{item.price}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                    <p class="text-center text-blue-800">
+                        <span class="font-semibold">¿Necesitas una cotización exacta?</span> Nuestro equipo te ayudará a armar un paquete personalizado según tus necesidades específicas.
+                    </p>
+                    <div class="mt-4 text-center">
+                        <a href="#contacto" class="inline-flex items-center text-blue-600 font-semibold hover:underline">
+                            Solicitar cotización personalizada
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this script at the bottom of the file, before the closing body tag -->
+    <script>
+        // Tab functionality for pricing section
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.pricing-tab');
+            const contents = document.querySelectorAll('.pricing-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.add('hidden'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                {[
+                    {
+                        question: '¿Qué incluye la suscripción?',
+                        answer: 'Todas las actualizaciones de características, soporte técnico y mantenimiento del servidor están incluidos en tu suscripción mensual.'
+                    },
+                    {
+                        question: '¿Puedo escalar después?',
+                        answer: '¡Claro! Nuestros planes son flexibles y puedes cambiar a uno superior en cualquier momento según las necesidades de tu negocio.'
+                    },
+                    {
+                        question: '¿Cómo es el proceso de implementación?',
+                        answer: 'Nuestro equipo se encarga de todo el proceso de implementación, incluyendo la migración de datos, configuración y capacitación de tu equipo.'
+                    },
+                    {
+                        question: '¿Qué tipo de soporte ofrecen?',
+                        answer: 'Ofrecemos soporte por correo electrónico, chat en vivo y teléfono con tiempos de respuesta garantizados según tu plan contratado.'
+                    }
+                ].map((item, index) => (
+                    <div key={index} class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-semibold mb-2">{item.question}</h3>
+                        <p class="text-gray-600">{item.answer}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para digitalizar tu negocio?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Agenda una demo o contáctanos para conocer cómo podemos ayudarte a transformar tu operación.</p>
+            <div class="space-x-4">
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Solicitar demo
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-colors">
+                    Contactar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DataRocket</h3>
+                    <p class="text-gray-400">Transformamos tu negocio con soluciones tecnológicas a medida.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white">Funcionalidades</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white">Precios</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Términos de Servicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Aviso Legal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>contacto@datarocket.com</li>
+                        <li>+52 55 1234 5678</li>
+                        <li>Ciudad de México, México</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© {new Date().getFullYear()} DataRocket. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
 </html>
